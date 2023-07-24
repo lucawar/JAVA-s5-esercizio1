@@ -16,10 +16,12 @@ public class Pizza extends AbstractProdotti {
 
 	private List<Topping> toppings = new ArrayList<>();
 	private String valoreNutrizionale;
+	private Topping topping;
 
-	public Pizza(String nome, double prezzo, String valoreNutrizionale) {
+	public Pizza(String nome, double prezzo, String valoreNutrizionale, Topping topping) {
 		super(nome, prezzo);
 		this.valoreNutrizionale = valoreNutrizionale;
+		this.topping = topping;
 	}
 
 	public void addTopping(Topping topping) {
@@ -28,6 +30,6 @@ public class Pizza extends AbstractProdotti {
 
 	@Override
 	public String toString() {
-		return " " + getNome() + " " + getPrezzo() + " " + getToppings() + valoreNutrizionale;
+		return " " + getNome() + " " + getPrezzo() + " " + " " + topping + getToppings() + valoreNutrizionale;
 	}
 }

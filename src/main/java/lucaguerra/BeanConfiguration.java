@@ -11,24 +11,29 @@ public class BeanConfiguration {
 		return "Forza Roma";
 	}
 
+	// CREAZIONE TOPPING
+	@Bean
+	public Topping margherita() {
+		Topping topMargherita = new Topping("pomodoro, mozzarella", 0.50);
+		return topMargherita;
+	}
+
+	// CREAZIONE PIZZE
 	@Bean
 	public Pizza margheritaPizza() {
-		Pizza pizza = new Pizza("Margherita", 8.99, "kcl 500");
-		pizza.addTopping(new Topping("Pomodoro", 0.50));
-		pizza.addTopping(new Topping("Mozzarella", 0.75));
+		Pizza pizza = new Pizza("Margherita", 8.99, "kcl 500", margherita());
 		return pizza;
 	}
 
 	@Bean
 	public Pizza hawaiianPizza() {
-		Pizza pizza = new Pizza("Hawaiian", 10.99, "kcl 600");
-		pizza.addTopping(new Topping("Pomodoro", 0.50));
-		pizza.addTopping(new Topping("Mozzarella", 0.75));
+		Pizza pizza = new Pizza("Hawaiian", 10.99, "kcl 600", margherita());
 		pizza.addTopping(new Topping("Prosciutto cotto", 1.00));
 		pizza.addTopping(new Topping("Ananas", 1.00));
 		return pizza;
 	}
 
+	// CREAZIONE DRINK
 	@Bean
 	public Drink colaDrink() {
 		return new Drink("Coca-Cola", 1.99, "kcl 150");
