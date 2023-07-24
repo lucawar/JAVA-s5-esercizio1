@@ -25,6 +25,8 @@ public class JavaS5Esercizio1Application {
 		log.info("Pizza: " + margheritaPizza);
 		log.info("Pizza: " + hawaiianPizza);
 		log.info(ctx.getBean("colaDrink").toString());
+		log.info(ctx.getBean("fantaDrink").toString());
+		log.info(ctx.getBean("chinottoDrink").toString());
 
 		ctx.close();
 

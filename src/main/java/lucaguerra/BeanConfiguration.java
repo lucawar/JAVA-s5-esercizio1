@@ -24,18 +24,22 @@ public class BeanConfiguration {
 		Pizza pizza = new Pizza("Hawaiian", 10.99, "kcl 600");
 		pizza.addTopping(new Topping("Pomodoro", 0.50));
 		pizza.addTopping(new Topping("Mozzarella", 0.75));
-		// Aggiungiamo una combinazione di topping (Hawaiian Pizza)
-		Topping prosciuttoTopping = new Topping("Prosciutto", 1.50);
-		Topping ananasTopping = new Topping("Ananas", 1.25);
-		Topping hawaiianCombo = new Topping("Hawaiian Pizza", 0.0);
-		hawaiianCombo.aggiungiCombinazioneTopping(prosciuttoTopping);
-		hawaiianCombo.aggiungiCombinazioneTopping(ananasTopping);
-		pizza.addTopping(hawaiianCombo);
+		pizza.addTopping(new Topping("Ananas", 1.00));
 		return pizza;
 	}
 
 	@Bean
 	public Drink colaDrink() {
 		return new Drink("Coca-Cola", 1.99, "kcl 150");
+	}
+
+	@Bean
+	public Drink fantaDrink() {
+		return new Drink("Fanta", 1.99, "kcl 150");
+	}
+
+	@Bean
+	public Drink chinottoDrink() {
+		return new Drink("Chinotto", 1.99, "kcl 150");
 	}
 }
