@@ -28,6 +28,6 @@ public class Pizza extends AbstractProdotti {
 
 	@Override
 	public String toString() {
-		return " " + getNome() + " " + getPrezzo() + " " + getToppings() + valoreNutrizionale + "]";
+		return " " + getNome() + " " + getPrezzo() + " " + getToppings() + valoreNutrizionale;
 	}
 }

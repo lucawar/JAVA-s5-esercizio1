@@ -24,6 +24,7 @@ public class BeanConfiguration {
 		Pizza pizza = new Pizza("Hawaiian", 10.99, "kcl 600");
 		pizza.addTopping(new Topping("Pomodoro", 0.50));
 		pizza.addTopping(new Topping("Mozzarella", 0.75));
+		pizza.addTopping(new Topping("Prosciutto cotto", 1.00));
 		pizza.addTopping(new Topping("Ananas", 1.00));
 		return pizza;
 	}

@@ -3,13 +3,11 @@ package lucaguerra;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Slf4j
 public class Drink extends AbstractProdotti {
 
@@ -22,7 +20,7 @@ public class Drink extends AbstractProdotti {
 
 	@Override
 	public String toString() {
-		return getNome() + " " + getPrezzo() + " " + valoreNutrizionale + "]";
+		return "Drink :" + " " + getNome() + " " + getPrezzo() + " " + valoreNutrizionale + "]";
 	}
 
 }
